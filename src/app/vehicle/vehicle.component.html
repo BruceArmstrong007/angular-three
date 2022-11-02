@@ -1,0 +1,24 @@
+
+  <ngt-group [ref]="raycastVehicleRef.ref" [position]="[0, -0.4, 0]" (beforeRender)="onBeforeRender()">
+
+    <app-car-body [ref]="chassisRef.ref">
+    </app-car-body>
+      <app-car-wheel
+        *ngFor="let wheelRef of wheels; even as isEven"
+        [ref]="wheelRef"
+        [radius]="radius"
+        [leftSide]="isEven"
+      ></app-car-wheel>
+    </ngt-group>
+
+    <ngt-perspective-camera (animateReady)="ready($event.object)">
+      <ngt-soba-orbit-controls
+      [enabled]="true"
+      [enableDamping]="true"
+      [enablePan]="true"
+      [enableRotate]="true"
+      [enableZoom]="true">
+      </ngt-soba-orbit-controls>
+
+      </ngt-perspective-camera>
+

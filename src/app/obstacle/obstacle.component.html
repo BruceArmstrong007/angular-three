@@ -1,0 +1,9 @@
+
+<ngt-soba-detailed [distances]="[15, 25, 35, 100]" >
+  <ng-template ngt-soba-detailed-content>
+  <ngt-mesh receiveShadow castShadow [ref]="boxRef.ref" [position]="position" [rotation]="rotation">
+    <ngt-box-geometry></ngt-box-geometry>
+    <ngt-mesh-basic-material color="tomato"></ngt-mesh-basic-material>
+  </ngt-mesh>
+  </ng-template>
+</ngt-soba-detailed>

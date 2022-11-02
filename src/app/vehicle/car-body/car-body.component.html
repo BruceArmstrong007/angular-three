@@ -1,0 +1,87 @@
+
+<ng-container *ngIf="carBody$ | async as carBody">
+  <ngt-mesh [ref]="ref" [position]="position" [rotation]="rotation">
+    <ngt-group [position]="[0, -0.6, 0]">
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Black paint']"
+        [geometry]="carBody.nodes['chassis_1'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Rubber']"
+        [geometry]="carBody.nodes['chassis_2'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Paint']"
+        [geometry]="carBody.nodes['chassis_3'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Underbody']"
+        [geometry]="carBody.nodes['chassis_4'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Chrom']"
+        [geometry]="carBody.nodes['chassis_5'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Interior (dark)']"
+        [geometry]="carBody.nodes['chassis_6'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Interior (light)']"
+        [geometry]="carBody.nodes['chassis_7'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Reflector']"
+        [geometry]="carBody.nodes['chassis_8'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh castShadow [material]="carBody.materials['Glass']" [geometry]="carBody.nodes['chassis_9'].geometry">
+        <ngt-value [attach]="['material', 'transparent']" [value]="true"></ngt-value>
+        <ngt-value [attach]="['material', 'color']" value="black"></ngt-value>
+      </ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Steel']"
+        [geometry]="carBody.nodes['chassis_10'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Black plastic']"
+        [geometry]="carBody.nodes['chassis_11'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Headlight']"
+        [geometry]="carBody.nodes['chassis_12'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Reverse lights']"
+        [geometry]="carBody.nodes['chassis_13'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Orange plastic']"
+        [geometry]="carBody.nodes['chassis_14'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['Tail lights']"
+        [geometry]="carBody.nodes['chassis_15'].geometry"
+      ></ngt-mesh>
+      <ngt-mesh
+        castShadow
+        [material]="carBody.materials['License Plate']"
+        [geometry]="carBody.nodes['chassis_16'].geometry"
+      ></ngt-mesh>
+    </ngt-group>
+
+  </ngt-mesh>
+</ng-container>

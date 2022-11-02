@@ -1,0 +1,9 @@
+<ng-container *ngIf="wheel$ | async as wheel">
+  <ngt-group [ref]="ref">
+    <ngt-group [rotation]="[0, 0, (leftSide ? 90 : -90) | radian]">
+      <ngt-mesh [material]="wheel.materials['Rubber']" [geometry]="wheel.nodes['wheel_1'].geometry"></ngt-mesh>
+      <ngt-mesh [material]="wheel.materials['Steel']" [geometry]="wheel.nodes['wheel_2'].geometry"></ngt-mesh>
+      <ngt-mesh [material]="wheel.materials['Chrom']" [geometry]="wheel.nodes['wheel_3'].geometry"></ngt-mesh>
+    </ngt-group>
+  </ngt-group>
+</ng-container>

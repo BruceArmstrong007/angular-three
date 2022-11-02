@@ -1,0 +1,38 @@
+<ngt-canvas shadows frameloop="demand" >
+  <ngt-color attach="background" color="lightblue"></ngt-color>
+
+
+
+  <ngt-ambient-light></ngt-ambient-light>
+
+  <ngt-fog attach="fog" [fog]="['#171720', 10, 50]"></ngt-fog>
+  <ngt-ambient-light intensity="0.1"></ngt-ambient-light>
+  <ngt-spot-light castShadow [position]="[10, 10, 10]" angle="0.5" intensity="1" penumbra="1"></ngt-spot-light>
+
+  <ngt-physics broadphase="SAP" [defaultContactMaterial]="{ contactEquationRelaxation: 4, friction: 1e-3 }" allowSleep>
+        <ngt-cannon-debug *ngIf="isDebugDisabled; else Debug">
+          <app-plane [position]="[0, -2.5, 0]"></app-plane>
+              <app-vehicle></app-vehicle>
+                <app-obstacle *ngFor="let position of positions"
+                [position]="position.position"
+                [rotation]="position.rotation">
+              </app-obstacle>
+        </ngt-cannon-debug>
+        <ng-template #Debug>
+          <app-plane [position]="[0, -2.5, 0]"></app-plane>
+              <app-vehicle></app-vehicle>
+
+              <app-obstacle  *ngFor="let position of positions"
+              [position]="position.position"
+              [rotation]="position.rotation">
+            </app-obstacle>
+        </ng-template>
+  </ngt-physics>
+
+
+
+  <ngt-soba-environment preset="night"></ngt-soba-environment>
+
+</ngt-canvas>
+
+<ngt-stats></ngt-stats>
