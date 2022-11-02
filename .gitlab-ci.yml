@@ -1,0 +1,14 @@
+image: node:18.19.0
+pages:
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm install -g @angular/cli
+    - npm install
+    - npm run buildProd
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
