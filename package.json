@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "buildProd": "ng build --base-href=/your-repo-name/",
+    "buildProd": "ng build --base-href=/angular-three/",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
