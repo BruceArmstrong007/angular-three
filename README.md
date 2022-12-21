@@ -28,7 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Drivable car with obstacles
 
-![image](https://user-images.githubusercontent.com/48177059/208860044-d8fd6eeb-36c4-4109-b842-8aeed1baaf09.png)
 
 
 Disclaimer 
