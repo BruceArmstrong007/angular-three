@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
 body {
-  font-family: sans-serif;
-  height: 100%;
-  width: 100%;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
