@@ -1,3 +1,8 @@
+
+
+<div class="loaderTemplate" *ngIf="loader.load$ | async" >
+  <div id="loader" ></div>
+</div>
 <ngt-canvas shadows frameloop="demand" >
   <ngt-color attach="background" color="lightblue"></ngt-color>
 
@@ -36,3 +41,4 @@
 </ngt-canvas>
 
 <ngt-stats></ngt-stats>
+

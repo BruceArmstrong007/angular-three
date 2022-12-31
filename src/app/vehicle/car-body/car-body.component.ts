@@ -1,3 +1,4 @@
+import { LoaderService } from './../../loader.service';
 import { Component, OnInit,Input,ChangeDetectionStrategy } from '@angular/core';
 import { NgtGLTFLoader } from '@angular-three/soba/loaders';
 import {NgtTriple,Ref } from '@angular-three/core';
@@ -63,11 +64,15 @@ export class CarBodyComponent implements OnInit {
   @Input() rotation?: NgtTriple;
 
   carBody$ = this.gltfLoader.load('assets/Beetle.glb') as Observable<any>;
-  constructor(private gltfLoader: NgtGLTFLoader) {
+  constructor(private gltfLoader: NgtGLTFLoader,private loader : LoaderService) {
 
   }
 
   ngOnInit(): void {
+    this.carBody$.subscribe((res:any)=>{
+      setTimeout(()=>{this.loader.setloader = false;},1000)
+
+    })
   }
 
 }
